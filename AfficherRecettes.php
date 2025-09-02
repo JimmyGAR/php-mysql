@@ -1,5 +1,8 @@
 <?php
 
+// Permet d'importer des fichiers externes (à voir pour plus tard)
+// require 'recettes.php';
+
 // Déclaration du tableau de recettes
 $users = [
     [
