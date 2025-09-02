@@ -113,10 +113,7 @@ function displayAuthor(string $authorEmail, array $users) : string
                 <?php echo $recipe['title'] . '<br>';?>
             </h2>
             <p>
-                <?php 
-
-                    echo $recipe['recipe'] . '<br>' . displayAuthor($recipe["author"], $users);
-                ?>
+                <?php echo $recipe['recipe'] . '<br>' . displayAuthor($recipe["author"], $users); ?>
             </p>
         <?php } } ?>
     </body>
