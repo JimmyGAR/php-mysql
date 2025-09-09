@@ -10,23 +10,23 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <div class="container">
-        <?php include_once('header.php'); ?>
+    <?php include_once('header.php'); ?>
+    <form action="submit_contact.php" method="GET">
         <h1>Contactez nous</h1>
         <section id="connexion">
             <div>
-                <h2>Email</h2>
-                <input type="text" name="email" placeholder="Email">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Email">
             </div>
             <div>
-                <h2>Votre message</h2>
-                <input type="text" name="mdp" placeholder="Mot de passe">
+                <label for="message">Votre message</label>
+                <textarea name="message" placeholder="Exprimez vous"></textarea>
             </div>
 
             <br>
-            <input type="submit" value="Envoyer">
+            <button type="submit">Envoyer</button>
         </section>
-    </div>
+    </form>
     <!-- inclusion du bas de page du site -->
     <?php include_once('footer.php'); ?>
 </body>
