@@ -13,19 +13,22 @@
 <body class="d-flex flex-column min-vh-100">
     <?php include_once('header.php'); ?>
     <form action="submit_contact.php" method="post" enctype="multipart/form-data">
-        <h1>Contactez nous</h1>
+        <h1 class="contact">Contactez nous</h1>
         <section id="connexion">
             <div>
-                <label for="email">Email</label><br>
-                <input type="email" name="email" placeholder="Email" required>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input class="email" type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <label for="message">Votre message</label><br>
+                    <textarea name="message" placeholder="Exprimez vous" required></textarea>
+                </div>
             </div>
-            <div>
-                <label for="message">Votre message</label><br>
-                <textarea name="message" placeholder="Exprimez vous" required></textarea>
-            </div>
+
             <div class="mb-3">
                 <label for="screenshot" class="form-label">Votre capture d'écran</label>
-                <input type="file" class="form-control" id="screenshot" name="screenshot" required/>
+                <input type="file" class="form-control" id="screenshot" name="screenshot" required />
             </div>
 
             <br>

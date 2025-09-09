@@ -14,6 +14,7 @@
     <?php include_once('header.php'); ?>
     <div class="container">
         <h1>Site de recettes</h1>
+        <hr>
         <!-- inclusion des variables et fonctions -->
         <?php
         include_once('variables.php');
@@ -22,17 +23,22 @@
         <!-- inclusion de l'entête du site -->
         <?php include_once('header.php'); ?>
 
-
         <?php
 
         foreach ($recipes as $recipe) {
 
             if ($recipe['enabled']) {
+                ?>
+                <div class="recettes">
+                <?php
                 echo "<h2> " . $recipe['title'] . '<br>' . "</h2>";
-                echo "<p> " . $recipe['recipe'] . '<br>' . displayAuthor($recipe["author"], $users) . "</p>";
+                echo "<p> " . $recipe['recipe'] . '<br>' . displayAuthor($recipe["author"], $users) . "</p>";?>
+                </div>
+                <?php
             }
         }
         ?>
+        <hr>
 
     </div>
     <!-- inclusion du bas de page du site -->
