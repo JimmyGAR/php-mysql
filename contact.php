@@ -11,7 +11,7 @@
 
 <body class="d-flex flex-column min-vh-100">
     <?php include_once('header.php'); ?>
-    <form action="submit_contact.php" method="post">
+    <form action="submit_contact.php" method="post" enctype="multipart/form-data">
         <h1>Contactez nous</h1>
         <section id="connexion">
             <div>
@@ -21,6 +21,10 @@
             <div>
                 <label for="message">Votre message</label>
                 <textarea name="message" placeholder="Exprimez vous"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="screenshot" class="form-label">Votre capture d'écran</label>
+                <input type="file" class="form-control" id="screenshot" name="screenshot" />
             </div>
 
             <br>
