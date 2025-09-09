@@ -12,9 +12,11 @@
 
 <body class="d-flex flex-column min-vh-100">
     <?php
-    if (!isset($_GET['email']) || !isset($_GET['message'])) {
-        echo ('<h1>Il faut un email et un message pour soumettre le formulaire.</h1>');
-        // Arrête l'exécution de PHP
+    if (
+        (!isset($_GET['email']) || !filter_var($_GET['email'], FILTER_VALIDATE_EMAIL))
+        || (!isset($_GET['message']) || empty($_GET['message']))
+    ) {
+        echo ('Il faut un email et un message valides pour soumettre le formulaire.');
         return;
     }
     ?>
