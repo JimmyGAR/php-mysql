@@ -19,8 +19,18 @@
         echo ('Il faut un email et un message valides pour soumettre le formulaire.');
         return;
     }
+    ?>
+    <h1>Message bien reçu !</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Rappel de vos informations</h5>
+            <p class="card-text"><b>Email</b> : <?php echo htmlspecialchars(strip_tags($_POST['email'])); ?> </p>
+            <p class="card-text"><b>Message</b> : <?php echo htmlspecialchars(strip_tags($_POST['message'])); ?> </p>
+        </div>
+    </div>
 
-    // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
+    <?php
+        // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
     if (isset($_FILES['screenshot']) && $_FILES['screenshot']['error'] == 0) {
         // Testons si le fichier n'est pas trop gros
         if ($_FILES['screenshot']['size'] <= 1000000) {
@@ -39,14 +49,6 @@
         }
     }
     ?>
-    <h1>Message bien reçu !</h1>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Rappel de vos informations</h5>
-            <p class="card-text"><b>Email</b> : <?php echo htmlspecialchars(strip_tags($_POST['email'])); ?> </p>
-            <p class="card-text"><b>Message</b> : <?php echo htmlspecialchars(strip_tags($_POST['message'])); ?> </p>
-        </div>
-    </div>
 </body>
 
 </html>

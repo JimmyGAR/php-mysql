@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de recettes - Page d'accueil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -15,16 +16,16 @@
         <h1>Contactez nous</h1>
         <section id="connexion">
             <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" placeholder="Email">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
             <div>
-                <label for="message">Votre message</label>
-                <textarea name="message" placeholder="Exprimez vous"></textarea>
+                <label for="message">Votre message</label><br>
+                <textarea name="message" placeholder="Exprimez vous" required></textarea>
             </div>
             <div class="mb-3">
                 <label for="screenshot" class="form-label">Votre capture d'écran</label>
-                <input type="file" class="form-control" id="screenshot" name="screenshot" />
+                <input type="file" class="form-control" id="screenshot" name="screenshot" required/>
             </div>
 
             <br>
