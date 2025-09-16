@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!-- index.php -->
 <!DOCTYPE html>
 <html>
@@ -26,7 +27,7 @@
         <?php include_once('login.php'); ?>
 
         <?php
-        if (isset($loggedUser)) {
+        if (isset($_SESSION['LOGGED_USER'])) {
 
             echo "<h1>Site de Recettes !</h1>";
 
