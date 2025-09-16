@@ -13,7 +13,6 @@
 <body class="d-flex flex-column min-vh-100">
     <?php include_once('header.php'); ?>
     <div class="container">
-        <h1>Site de recettes</h1>
         <hr>
         <!-- inclusion des variables et fonctions -->
         <?php
@@ -23,18 +22,25 @@
         <!-- inclusion de l'entête du site -->
         <?php include_once('header.php'); ?>
 
+        <!-- Inclusion du formulaire de connexion -->
+        <?php include_once('login.php'); ?>
+
         <?php
+        if (isset($loggedUser)) {
 
-        foreach ($recipes as $recipe) {
+            echo "<h1>Site de Recettes !</h1>";
 
-            if ($recipe['enabled']) {
-                ?>
-                <div class="recettes">
-                <?php
-                echo "<h2> " . $recipe['title'] . '<br>' . "</h2>";
-                echo "<p> " . $recipe['recipe'] . '<br>' . displayAuthor($recipe["author"], $users) . "</p>";?>
-                </div>
-                <?php
+            foreach ($recipes as $recipe) {
+
+                if ($recipe['enabled']) {
+                    ?>
+                    <div class="recettes">
+                        <?php
+                        echo "<h2> " . $recipe['title'] . '<br>' . "</h2>";
+                        echo "<p> " . $recipe['recipe'] . '<br>' . displayAuthor($recipe["author"], $users) . "</p>"; ?>
+                    </div>
+                    <?php
+                }
             }
         }
         ?>
