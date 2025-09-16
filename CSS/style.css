@@ -92,11 +92,21 @@ hr {
     height: 200px;
 }
 
-#connexion button {
+#connexion button, form button {
     background-color: brown;
     color: blanchedalmond;
 }
 
 .mb-3 {
-    width: 30%;
+    font-size: 1em;
+    color: brown;
+}
+
+#email-help {
+    font-size: 0.5em;
+    color: black;
+}
+
+form button {
+    padding: 10px;
 }
