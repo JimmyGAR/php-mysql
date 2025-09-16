@@ -1,3 +1,8 @@
+<?php
+// retenir l'email de la personne connectée pendant 1 an
+setcookie('LOGGED_USER','user@exple.com',time()+365*24*3600,"","",true,true);
+?>
+
 <!-- index.php -->
 <!DOCTYPE html>
 <html>
